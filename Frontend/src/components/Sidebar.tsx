@@ -14,11 +14,14 @@ const Sidebar = () => {
     getUsers();
   }, [getUsers]);
 
-  const filteredUsers = users
+  const safeUsers = Array.isArray(users) ? users : [];
+
+const filteredUsers = safeUsers
   .filter((u) => u._id !== authUser?._id)
   .filter((u) =>
     showOnlineOnly ? onlineUsers.includes(u._id) : true
   );
+
 
   if (isUsersLoading) return <SidebarSkeleton />;
 
