@@ -4,7 +4,6 @@ import connectDB from './lib/db';
 import cookieParser from 'cookie-parser'
 import cors from "cors"
 import corsOptions from "./config/corsOptions";
-import credentials from './middleware/credentials';
 
 import authRouter from './routes/authRoute'
 import messageRouter from './routes/messageRoute'
@@ -13,7 +12,6 @@ import { app, server } from './lib/socket';
 dotenv.config();
 const port = process.env.PORT;
 
-app.use(credentials);
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));
 app.use(cookieParser());
