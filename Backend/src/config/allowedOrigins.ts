@@ -3,8 +3,8 @@ const allowedOrigins = [
     'http://localhost:6000',
     'https://127.0.0.1:6000',
     'http://localhost:5173',
-    'https://127.0.0.1:5173',
-    '',
+    'https://127.0.0.1:5173',,
+    "https://chatty-frontend.onrender.com"
 ];
 
 export default allowedOrigins;
