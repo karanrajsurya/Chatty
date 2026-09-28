@@ -20,7 +20,6 @@ const App = () => {
     checkAuth();
     document.documentElement.setAttribute("data-theme", theme);
   }, [checkAuth, theme])
-  console.log({ authUser });
 
   if (isCheckingAuth && !authUser)
     return (
